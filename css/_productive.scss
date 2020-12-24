@@ -1,0 +1,64 @@
+.productive {
+  background-color: $mainBg;
+  display: flex;
+  flex-direction: column;
+  padding: 0 25px;
+  align-items: center;
+  justify-content: center;
+
+  @include breakpoint(large) {
+    flex-direction: row;
+    padding: 110px 77px;
+  }
+
+  > img {
+    max-width: 620px;
+    width: 100%;
+    padding-bottom: 2em;
+    @include breakpoint(large) {
+      padding-bottom: 0;
+    }
+  }
+
+  h1 {
+    font-size: 2.1875rem;
+    max-width: 350px;
+  }
+
+  h1 {
+    font-size: 1.25rem;
+    padding-bottom: 1em;
+    @include breakpoint(large) {
+      font-size: 1.9375rem;
+    }
+  }
+
+  p {
+    padding-bottom: 1.3em;
+  }
+
+  a {
+    color: $ctaCyan;
+    padding-bottom: 0.2em;
+    border-bottom: 1px solid $ctaCyan;
+
+    &:hover {
+      color: $ctaBlue;
+    }
+  }
+
+  span {
+    padding-left: 0.5em;
+    position: relative;
+    bottom: -3px;
+  }
+
+  &__body {
+    max-width: 500px;
+    max-height: 300px;
+
+    @include breakpoint(large) {
+      margin-left: 3em;
+    }
+  }
+}

@@ -1,0 +1,45 @@
+header {
+  display: grid;
+  align-items: center;
+  grid-template-columns: minmax(100px, 1fr) repeat(3, auto);
+  grid-gap: 20px;
+  padding: 20px 20px 40px 20px;
+  text-align: center;
+  background-color: $introBg;
+
+  @include breakpoint(large) {
+    padding: 70px 77px;
+    grid-gap: 54px;
+  }
+
+  img {
+    width: 75px;
+    @include breakpoint(large) {
+      width: 180px;
+    }
+  }
+
+  a {
+    font-size: 0.875rem;
+    padding: 0 0 0.5em 0;
+
+    &:hover {
+      color: $ctaCyan;
+      border-bottom: solid 1px $ctaCyan;
+    }
+
+    @include breakpoint(large) {
+      font-size: 1rem;
+    }
+  }
+
+  h1 {
+    max-width: 680px;
+    font-size: 1rem;
+  }
+
+  p {
+    max-width: 590px;
+    font-size: 0.625rem;
+  }
+}

@@ -1,0 +1,89 @@
+footer {
+  background-color: $footerBg;
+  padding: 250px 25px 0 25px;
+  line-height: 2;
+
+  img {
+    width: 15px;
+    height: 15px;
+    margin: 0.5em 1em 0 0;
+  }
+
+  @include breakpoint(large) {
+    padding: 200px 80px 80px 80px;
+  }
+
+  .logo {
+    width: 170px;
+    height: 60px;
+    object-fit: contain;
+  }
+
+  .footer-container {
+    display: flex;
+    flex-direction: column;
+
+    @include breakpoint(large) {
+      flex-direction: row;
+      justify-content: space-between;
+
+      > div {
+        margin: 0;
+        padding: 0;
+      }
+    }
+  }
+
+  .location {
+    display: flex;
+    max-width: 300px;
+  }
+
+  .contacts {
+    display: flex;
+    max-width: 200px;
+    flex-direction: column;
+    margin-top: 1em;
+    line-height: 2.3;
+
+    img {
+      margin: 0.2em 1em 0 0;
+    }
+  }
+
+  .links {
+    display: flex;
+    flex-direction: column;
+    max-width: 250px;
+    height: 270px;
+    margin-top: 70px;
+    line-height: 2.3;
+    justify-content: space-between;
+
+    @include breakpoint(large) {
+      flex-direction: row;
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      padding-right: 3.5em;
+    }
+
+    a:hover {
+      color: $ctaCyan;
+    }
+  }
+
+  .social {
+    margin: 70px auto 30px auto;
+
+    i {
+      padding: 0 1em;
+
+      &:hover {
+        transform: scale(1.5);
+      }
+    }
+  }
+}
